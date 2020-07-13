@@ -1,5 +1,4 @@
 package com.epam.tat.module4;
-
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeGroups;
 

@@ -14,6 +14,18 @@ public class SqrtTest extends BaseCalculatorTest {
         Assert.assertEquals(sqrt, expected, "incorrect sqrt result");
     }
 
+    @Test(groups = "special")
+    public void testSqrtInfinity() {
+        double sqrt = calculator.sqrt(Double.POSITIVE_INFINITY);
+        Assert.assertEquals(sqrt, Double.POSITIVE_INFINITY, "incorrect sqrt result");
+    }
+
+    @Test(groups = "special")
+    public void testSqrtNegInfinity() {
+        double sqrt = calculator.sqrt(Double.NEGATIVE_INFINITY);
+        Assert.assertEquals(sqrt, Double.NaN, "incorrect sqrt result");
+    }
+
     @DataProvider(name = "sqrtDataProvider")
     public Object[][] powDataProvider() {
         return new Object[][]{

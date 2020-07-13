@@ -15,6 +15,18 @@ public class MultDoubleTest extends BaseCalculatorTest {
         Assert.assertEquals(mult, expected, "incorrect mult result");
     }
 
+    @Test(groups = "special")
+    public void testMultInfinity(){
+        double mult = calculator.mult(Double.POSITIVE_INFINITY, 0);
+        Assert.assertEquals(mult, Double.POSITIVE_INFINITY, "incorrect mult result");
+    }
+
+    @Test(groups = "special")
+    public void testMultNegInfinity(){
+        double mult = calculator.mult(Double.NEGATIVE_INFINITY, Double.POSITIVE_INFINITY);
+        Assert.assertEquals(mult, Double.NaN, "incorrect mult result");
+    }
+
     @DataProvider(name = "multDataProvider")
     public Object[][] multDataProvider() {
         return new Object[][]{

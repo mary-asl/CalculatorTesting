@@ -27,7 +27,7 @@ public class SumDoubleTest extends BaseCalculatorTest {
     }
 
     @Test(groups = "main")
-    public void sumLongTest() {
+    public void sumDoubleTest() {
         double sum = calculator.sum(a, b);
         Assert.assertEquals(sum, expected, "incorrect summation result");
     }
@@ -45,6 +45,7 @@ public class SumDoubleTest extends BaseCalculatorTest {
         return new Object[][]{
                 {1, 1, 2},
                 {0, 0, 0},
+                {0.5, 1, 1.5}
         };
     }
 }

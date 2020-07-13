@@ -18,7 +18,7 @@ public class CtgTest extends BaseCalculatorTest {
     public Object[][] DataProvider() {
         return new Object[][]{
                 {45, 1},
-                {90, -0.50120278338},
+                {90, 1},
                 {0, 0}
         };
     }

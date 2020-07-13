@@ -12,8 +12,8 @@ public class BaseCalculatorTest {
         calculator = new Calculator();
     }
 
-    @BeforeGroups(value = {"main"})
+    @BeforeGroups(value = {"special"})
     public void beforeGroup(){
-        System.out.println("Before main group");
+        System.out.println("Before special group");
     }
 }

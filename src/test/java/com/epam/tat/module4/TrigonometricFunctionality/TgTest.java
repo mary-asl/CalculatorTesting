@@ -14,6 +14,8 @@ public class TgTest extends BaseCalculatorTest {
         Assert.assertEquals(result, expected, "incorrect tg result");
     }
 
+
+
     @DataProvider(name = "DataProvider")
     public Object[][] DataProvider() {
         return new Object[][]{

@@ -3,23 +3,48 @@ package com.epam.tat.module4.ArithmeticFunctionality;
 import com.epam.tat.module4.BaseCalculatorTest;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.Factory;
 import org.testng.annotations.Test;
 
 public class SumDoubleTest extends BaseCalculatorTest {
-    @Test(groups = "main", dataProvider = "sumDataProvider")
-    @Parameters({"a", "b", "expected"})
-    public void sumLongTest(double a, double b, double expected) {
+
+    private double a;
+    private double b;
+    private double expected;
+
+    @Factory(dataProvider = "StringDataProvider")
+    public SumDoubleTest(String a, String b, String expected) {
+        this.a = Double.parseDouble(a);
+        this.b = Double.parseDouble(b);
+        this.expected = Double.parseDouble(expected);
+    }
+
+    @Factory(dataProvider = "DoubleDataProvider")
+    public SumDoubleTest(double a, double b, double expected) {
+        this.a = a;
+        this.b = b;
+        this.expected = expected;
+    }
+
+    @Test(groups = "main")
+    public void sumLongTest() {
         double sum = calculator.sum(a, b);
         Assert.assertEquals(sum, expected, "incorrect summation result");
     }
 
-    @DataProvider(name = "sumDataProvider")
-    public Object[][] sumDataProvider() {
+    @DataProvider(name = "StringDataProvider")
+    public static Object[][] StringDataProvider() {
+        return new Object[][]{
+                {"13", "1", "14"},
+                {"0", "0", "0"},
+        };
+    }
+
+    @DataProvider(name = "DoubleDataProvider")
+    public static Object[][] DoubleDataProvider() {
         return new Object[][]{
                 {1, 1, 2},
                 {0, 0, 0},
-                {0, 10, 10}
         };
     }
 }

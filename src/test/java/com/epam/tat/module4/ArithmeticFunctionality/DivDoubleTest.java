@@ -22,7 +22,7 @@ public class DivDoubleTest extends BaseCalculatorTest {
     @DataProvider(name = "divDataProvider")
     public Object[][] divDataProvider() {
         return new Object[][]{
-                {2, 0.5, 1},
+                {2, 0.5, 4},
                 {0, 3.4, 0},
                 {2, 10, 0.2}
         };

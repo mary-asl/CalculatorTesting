@@ -1,10 +1,26 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Calculator" verbose="1" parallel="false">
+<suite name="Calculator" verbose="1" parallel="methods" thread-count="4">
     <test name="Calculator">
         <classes>
-            <class name="com.epam.tat.module4.SumLongTest"></class>
-            <class name="com.epam.tat.module4.DivTest"></class>
+            <class name="com.epam.tat.module4.ArithmeticFunctionality.SumLongTest"></class>
+            <class name="com.epam.tat.module4.ArithmeticFunctionality.DivLongTest"></class>
+            <class name="com.epam.tat.module4.ArithmeticFunctionality.SumDoubleTest"></class>
+            <class name="com.epam.tat.module4.ArithmeticFunctionality.DivDoubleTest"></class>
+            <class name="com.epam.tat.module4.ArithmeticFunctionality.MultDoubleTest"></class>
+            <class name="com.epam.tat.module4.ArithmeticFunctionality.MultLongTest"></class>
+            <class name="com.epam.tat.module4.ArithmeticFunctionality.PowTest"></class>
+            <class name="com.epam.tat.module4.ArithmeticFunctionality.SqrtTest"></class>
+            <class name="com.epam.tat.module4.ArithmeticFunctionality.SubLongTest"></class>
+            <class name="com.epam.tat.module4.ArithmeticFunctionality.SubDoubleTest"></class>
+
+            <class name="com.epam.tat.module4.LogicalFunctionality.IsNegativeTest"></class>
+            <class name="com.epam.tat.module4.LogicalFunctionality.IsPositiveTest"></class>
+
+            <class name="com.epam.tat.module4.TrigonometricFunctionality.CosTest"></class>
+            <class name="com.epam.tat.module4.TrigonometricFunctionality.SinTest"></class>
+            <class name="com.epam.tat.module4.TrigonometricFunctionality.TgTest"></class>
+            <class name="com.epam.tat.module4.TrigonometricFunctionality.CtgTest"></class>
         </classes>
     </test>
 </suite>

@@ -29,7 +29,7 @@ public class SubLongTest extends BaseCalculatorTest {
     @Test(groups = "main")
     public void subLongTest() {
         long sub = calculator.sub(a, b);
-        Assert.assertEquals(sub, expected, "incorrect summation result");
+        Assert.assertEquals(sub, expected, "incorrect sub result");
     }
 
     @DataProvider(name = "StringDataProvider")

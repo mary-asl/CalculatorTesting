@@ -30,9 +30,11 @@ public class PowTest extends BaseCalculatorTest {
     public Object[][] powDataProvider() {
         return new Object[][]{
                 {2, 2, 4},
-                {3, 2, 9},
-                {2, 0, 1},
-                {2, 1, 2}
+                {10, 2, 100},
+                {-10, 2, 100},
+                {10, -2, 0.01},
+                {10, 0, 1},
+                {10, 1, 10}
         };
     }
 }

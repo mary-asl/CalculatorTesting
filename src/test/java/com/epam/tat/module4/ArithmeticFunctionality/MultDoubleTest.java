@@ -30,9 +30,9 @@ public class MultDoubleTest extends BaseCalculatorTest {
     @DataProvider(name = "multDataProvider")
     public Object[][] multDataProvider() {
         return new Object[][]{
-                {2, 0.5, 1},
-                {0, 3.4, 0},
-                {2, 10, 20}
+                {-10, 10, -100},
+                {-10, -10, 100},
+                {10.9, 10.1, 110.09},
         };
     }
 }

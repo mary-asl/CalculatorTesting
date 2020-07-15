@@ -35,18 +35,22 @@ public class SubLongTest extends BaseCalculatorTest {
     @DataProvider(name = "StringDataProvider")
     public static Object[][] StringDataProvider() {
         return new Object[][]{
-                {"13", "1", "12"},
+                {"10", "1", "9"},
                 {"0", "0", "0"},
-                {"1", "1", "0"},
+                {"-10", "-10", "0"},
                 {"0", "10", "-10"},
+                {"-10", "10", "-20"}
         };
     }
 
     @DataProvider(name = "LongDataProvider")
     public static Object[][] LongDataProvider() {
         return new Object[][]{
-                {1, 1, 0},
-                {66, 0, 66},
+                {10, 1, 9},
+                {0, 0, 0},
+                {-10, -10, 0},
+                {0, 10, -10},
+                {-10, 10, -20}
         };
     }
 }

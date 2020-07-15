@@ -18,9 +18,10 @@ public class SumLongTest extends BaseCalculatorTest {
     @DataProvider(name = "sumDataProvider")
     public Object[][] sumDataProvider() {
         return new Object[][]{
+                {-10, 10, 0},
+                {-10, -10, -20},
                 {1, 1, 2},
-                {0, 0, 0},
-                {0, 10, 10}
+                {0, 0, 0}
         };
     }
 

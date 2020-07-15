@@ -43,6 +43,8 @@ public class SumDoubleTest extends BaseCalculatorTest {
     @DataProvider(name = "DoubleDataProvider")
     public static Object[][] DoubleDataProvider() {
         return new Object[][]{
+                {-10, 10, 0},
+                {-10, -10, -20},
                 {1, 1, 2},
                 {0, 0, 0},
                 {0.5, 1, 1.5}

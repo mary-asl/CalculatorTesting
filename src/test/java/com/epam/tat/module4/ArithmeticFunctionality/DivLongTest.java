@@ -22,9 +22,10 @@ public class DivLongTest extends BaseCalculatorTest {
     @DataProvider(name = "divDataProvider")
     public Object[][] divDataProvider() {
         return new Object[][]{
-                {1, 1, 1},
-                {0, 1, 0},
-                {10, 2, 5}
+                {-10, 10, -1},
+                {-10, -10, 1},
+                {10, 10, 1},
+                {0, 10, 0},
         };
     }
 }

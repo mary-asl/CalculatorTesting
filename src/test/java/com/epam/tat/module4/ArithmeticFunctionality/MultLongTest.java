@@ -15,9 +15,9 @@ public class MultLongTest extends BaseCalculatorTest {
     @DataProvider(name = "multDataProvider")
     public Object[][] multDataProvider() {
         return new Object[][]{
-                {2, 5, 10},
-                {0, 0, 0},
-                {2, 1000, 2000}
+                {-10, 10, -100},
+                {-10, -10, 100},
+                {10, 10, 100},
         };
     }
 }

@@ -30,7 +30,8 @@ public class SqrtTest extends BaseCalculatorTest {
     public Object[][] powDataProvider() {
         return new Object[][]{
                 {4, 2},
-                {9, 3},
+                {-4, 0},
+                {0, 0}
         };
     }
 }

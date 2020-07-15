@@ -40,9 +40,11 @@ public class DivDoubleTest extends BaseCalculatorTest {
     @DataProvider(name = "divDataProvider")
     public Object[][] divDataProvider() {
         return new Object[][]{
-                {2, 0.5, 4},
-                {0, 3.4, 0},
-                {2, 10, 0.2}
+                {-10, 10, -1},
+                {-10, -10, 1},
+                {10, 10, 1},
+                {-10.5, 10, -1.05},
+                {0, 10, 0},
         };
     }
 }
